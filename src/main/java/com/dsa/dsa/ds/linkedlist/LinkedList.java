@@ -19,6 +19,13 @@ public class LinkedList {
         }
     }
 
+    public void insertAt(int data){
+        Node node = new Node();
+        node.data = data;
+        node.next = head;
+        head = node;
+    }
+
     public void show() {
         Node node = head;
         while (node.next != null) {

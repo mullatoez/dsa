@@ -11,6 +11,7 @@ public class WorkingWithLinkedList {
         linkedList.insert(4);
         linkedList.insert(2);
         linkedList.insert(1);
+        linkedList.insertAt(12);
 
         linkedList.show();
     }
