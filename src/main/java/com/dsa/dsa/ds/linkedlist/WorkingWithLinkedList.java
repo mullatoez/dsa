@@ -6,14 +6,15 @@ public class WorkingWithLinkedList {
     public static void main(String[] args) {
 
         LinkedList linkedList = new LinkedList();
+        linkedList.insert(5);
+        linkedList.insert(12);
         linkedList.insert(6);
-        linkedList.insert(3);
-        linkedList.insert(4);
-        linkedList.insert(2);
-        linkedList.insert(1);
-        linkedList.insertAt(12);
+        linkedList.insert(9);
+        linkedList.insert(8);
+        linkedList.insertAt(0,34);
 
         linkedList.show();
+
     }
 
     /* 5 - 12 - 6 - 9 - 8 */
