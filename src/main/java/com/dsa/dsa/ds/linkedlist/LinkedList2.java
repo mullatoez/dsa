@@ -29,6 +29,9 @@ public class LinkedList2 {
         list2.show();
 
         System.out.println(list2.countNodes());
+        Node node = new Node();
+        node.data = 120000;
+        System.out.println(list2.checkIfNodeExists(node));
 
     }
 
@@ -54,5 +57,22 @@ public class LinkedList2 {
         }
 
         return count;
+    }
+
+    public boolean checkIfNodeExists(Node node){
+        if (head == null) {
+            return false;
+        }
+
+        Node current = head;
+        while (current.next != null) {
+            current = current.next;
+        }
+
+        if (current.data == node.data)
+            return true;
+
+        return false;
+
     }
 }
