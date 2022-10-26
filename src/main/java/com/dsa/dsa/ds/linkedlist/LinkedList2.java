@@ -32,27 +32,27 @@ public class LinkedList2 {
 
     }
 
-   public void show(){
+    public void show() {
         Node node = head;
-        while (node.next != null){
+        while (node.next != null) {
             System.out.println(node.data);
             node = node.next;
         }
-       System.out.println(node.data);
-   }
+        System.out.println(node.data);
+    }
 
-   public int countNodes(){
-        if (head == null){
-            return  -1;
+    public int countNodes() {
+        if (head == null) {
+            return -1;
         }
 
         int count = 1;
         Node current = head;
-        while (current.next != null){
+        while (current.next != null) {
             current = current.next;
             count += 1;
         }
 
         return count;
-   }
+    }
 }
