@@ -2,6 +2,24 @@ package com.dsa.dsa.ds.linkedlist;
 
 public class LinkedList2 {
     Node head;
+    Node tail;
+    int size;
+
+    public LinkedList2() {
+        this.size = 0;
+    }
+
+    public void insertNodeAtFirstPlace(int val) {
+        Node node = new Node(val);
+        node.next = head;
+        head = node;
+
+        if (tail == null){
+            tail = head; // both head and tail i.e head is tail
+        }
+
+        size += 1;
+    }
 
     public void insert(int data) {
         Node node = new Node();
@@ -25,6 +43,7 @@ public class LinkedList2 {
         list2.insert(120);
         list2.insert(1200);
         list2.insert(12000);
+        list2.insertNodeAtFirstPlace(100);
 
         list2.show();
 
@@ -59,7 +78,7 @@ public class LinkedList2 {
         return count;
     }
 
-    public boolean checkIfNodeExists(Node node){
+    public boolean checkIfNodeExists(Node node) {
         if (head == null) {
             return false;
         }
