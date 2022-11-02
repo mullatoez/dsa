@@ -1,15 +1,34 @@
 package com.dsa.dsa.ds.tries;
 
+import java.util.HashMap;
+
 public class TrieNode {
-    TrieNode[] children = new TrieNode[26];
 
-    public static void main(String[] args) {
-        int count = 0;
+    private HashMap<Character, TrieNode> children;
+    private String content;
+    private boolean isWord;
 
-        if (true)
-            count += count + 10;
-            System.out.println(count);
+    public HashMap<Character, TrieNode> getChildren() {
+        return children;
+    }
 
-        System.out.println(count);
+    public void setChildren(HashMap<Character, TrieNode> children) {
+        this.children = children;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public boolean isWord() {
+        return isWord;
+    }
+
+    public void setWord(boolean word) {
+        isWord = word;
     }
 }
